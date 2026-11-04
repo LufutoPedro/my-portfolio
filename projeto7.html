@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/png" href="icone-PL.svg">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <title>Website Porsche Angola | Serviços & Oficina Oficial | Pedro Miguel</title>
+
+    <style>
+        /* ===== ESTILO DA PÁGINA DE PROJETO (case study) ===== */
+        section.projeto-hero {
+            padding: 60px 4% 20px 4%;
+        }
+
+        .projeto-voltar {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #d1d1d1;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+            transition: .2s;
+            margin-bottom: 40px;
+        }
+
+        .projeto-voltar:hover {
+            color: #0066CC;
+            transform: translateX(-4px);
+        }
+
+        .projeto-titulo h2 {
+            color: #0066CC;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+        }
+
+        .projeto-titulo h1 {
+            color: #fff;
+            font-size: 54px;
+            font-weight: 800;
+            letter-spacing: -1px;
+            margin-bottom: 25px;
+            max-width: 850px;
+        }
+
+        .projeto-titulo p.descricao {
+            color: #d1d1d1;
+            font-size: 17px;
+            line-height: 1.8;
+            max-width: 1300px;
+            text-align: justify;
+            margin-bottom: 18px;
+        }
+
+        .projeto-meta {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin: 50px 0 20px 0;
+            padding: 35px 0;
+            border-top: 1px solid rgba(0, 102, 204, 0.2);
+            border-bottom: 1px solid rgba(0, 102, 204, 0.2);
+        }
+
+        .projeto-meta .meta-item h3 {
+            color: #0066CC;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .projeto-meta .meta-item p,
+        .projeto-meta .meta-item a {
+            color: #fff;
+            font-size: 16px;
+            font-weight: 500;
+            text-decoration: none;
+        }
+
+        .projeto-meta .meta-item a:hover {
+            color: #0066CC;
+        }
+
+        /* FUNCIONALIDADES */
+        section.projeto-funcionalidades {
+            padding: 40px 4% 20px 4%;
+        }
+
+        .funcionalidades-titulo {
+            max-width: 1280px;
+            margin: 0 auto 30px auto;
+            color: #fff;
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        .funcionalidades-titulo span {
+            color: #0066CC;
+        }
+
+        .funcionalidades-grid {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .func-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(0, 102, 204, 0.2);
+            border-radius: 16px;
+            padding: 28px;
+            transition: .2s;
+        }
+
+        .func-card:hover {
+            border-color: #0066CC;
+            transform: translateY(-4px);
+        }
+
+        .func-card i {
+            color: #0066CC;
+            font-size: 28px;
+            display: block;
+            margin-bottom: 14px;
+        }
+
+        .func-card h3 {
+            color: #fff;
+            font-size: 17px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .func-card p {
+            color: #d1d1d1;
+            font-size: 14.5px;
+            line-height: 1.7;
+        }
+
+        /* GALERIA */
+        section.projeto-galeria {
+            padding: 60px 4% 80px 4%;
+        }
+
+        .galeria-item {
+            max-width: 1280px;
+            margin: 0 auto 60px auto;
+        }
+
+        /* Capturas de ecrã compridas (página inteira): limitar a largura */
+        .galeria-item.estreito {
+            max-width: 720px;
+        }
+
+        .galeria-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+        }
+
+        .galeria-item .legenda {
+            color: #888;
+            font-size: 14px;
+            margin-top: 15px;
+            text-align: center;
+            letter-spacing: 0.5px;
+        }
+
+        /* NAVEGAÇÃO ENTRE PROJETOS */
+        .projeto-nav {
+            max-width: 1280px;
+            margin: 20px auto 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 40px;
+            border-top: 1px solid rgba(0, 102, 204, 0.2);
+        }
+
+        .projeto-nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: .2s;
+        }
+
+        .projeto-nav a:hover {
+            color: #0066CC;
+        }
+
+        @media screen and (max-width: 1020px) {
+            .projeto-titulo h1 {
+                font-size: 34px;
+            }
+
+            .projeto-meta {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .funcionalidades-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .projeto-meta {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .funcionalidades-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="interface">
+            <div class="logo">
+                <h2 style="color: #fff;"><a href="index.html">PEDRO<span>MIGUEL.</span></a></h2>
+            </div>
+            <nav class="menu-desktop">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#especialidades">Especialidade</a></li>
+                    <li><a href="index.html#sobre">Sobre</a></li>
+                    <li><a href="index.html#projetos">Projetos</a></li>
+                </ul>
+            </nav>
+            <nav class="btn-contato">
+                <a href="contacto.html">
+                    <button>Contacto</button>
+                </a>
+            </nav>
+
+            <div class="btn-abrir-menu" id="btn-menu">
+                <i class="bi bi-list"></i>
+            </div>
+
+            <div class="menu-mobile" id="menu-mobile">
+                <div class="btn-fechar">
+                    <i class="bi bi-x-lg"></i>
+                </div>
+
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#especialidades">Especialidade</a></li>
+                        <li><a href="index.html#sobre">Sobre</a></li>
+                        <li><a href="index.html#projetos">Projetos</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="overlay-menu" id="overlay-menu"></div>
+        </div>
+    </header>
+
+    <main>
+        <section class="projeto-hero reveal">
+            <div class="interface">
+                <a href="index.html#projetos" class="projeto-voltar"><i class="bi bi-arrow-left"></i> Voltar aos
+                    projetos</a>
+
+                <div class="projeto-titulo">
+                    <h2>Website Institucional / Serviços & Oficina</h2>
+                    <h1>Porsche Angola <span style="color:#0066CC;">.</span></h1>
+                    <p class="descricao">
+                        Desenvolvimento do website da Porsche Angola, importador e distribuidor oficial da marca no
+                        país, com foco nos serviços de oficina e pós-venda. O site transmite a exigência e a
+                        sofisticação da marca e leva o cliente, de forma direta, ao agendamento de revisões,
+                        diagnósticos, trocas de óleo, peças originais, pneus e assistência para modelos elétricos
+                        e híbridos.
+                    </p>
+                    <p class="descricao">
+                        Além dos serviços da oficina oficial, o site apresenta o Porsche Centre Luanda, a gama de
+                        modelos, as unidades com morada e horários, o Club Porsche Angola e a Revista Insider,
+                        com uma barra de acesso rápido, menu lateral e um formulário de contacto pensado para
+                        pedidos de serviço.
+                    </p>
+                </div>
+
+                <div class="projeto-meta">
+                    <div class="meta-item">
+                        <h3>Cliente</h3>
+                        <p>Porsche Angola</p>
+                    </div>
+                    <div class="meta-item">
+                        <h3>Serviços</h3>
+                        <p>Website Institucional / Serviços & Oficina Oficial</p>
+                    </div>
+                    <div class="meta-item">
+                        <h3>Stack</h3>
+                        <p>HTML, CSS, <br>JavaScript</p>
+                    </div>
+                    <div class="meta-item">
+                        <h3>Link</h3>
+                        <a href="https://porscheangola.vibeagency.ao/" target="_blank">porscheangola.vibeagency.ao <i class="bi bi-box-arrow-up-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="projeto-funcionalidades reveal">
+            <h2 class="funcionalidades-titulo">Principais <span>funcionalidades</span></h2>
+            <div class="funcionalidades-grid">
+                <div class="func-card">
+                    <i class="bi bi-clipboard2-check"></i>
+                    <h3>Revisão e diagnóstico oficial</h3>
+                    <p>Revisão Programada Porsche, com 111 pontos de verificação, e Diagnóstico Oficial PIWIS, com botões de ação para agendar ou solicitar.</p>
+                </div>
+                <div class="func-card">
+                    <i class="bi bi-gear-wide-connected"></i>
+                    <h3>Peças originais e pneus</h3>
+                    <p>Peças Originais Porsche com garantia de fábrica, Troca de Óleo Express e Pneus e Geometria N-Rated, cada um com a sua chamada para ação.</p>
+                </div>
+                <div class="func-card">
+                    <i class="bi bi-lightning-charge"></i>
+                    <h3>E-Performance</h3>
+                    <p>Serviço dedicado à assistência de Taycan e híbridos, com bancada especializada em alta tensão (800V).</p>
+                </div>
+                <div class="func-card">
+                    <i class="bi bi-calendar-check"></i>
+                    <h3>Pedido de serviço online</h3>
+                    <p>Formulário com assunto (como "Agendamento de Serviço e Revisão"), modelo, ano de fabrico e mensagem, com consentimento para o tratamento dos dados.</p>
+                </div>
+                <div class="func-card">
+                    <i class="bi bi-geo-alt"></i>
+                    <h3>Unidades e horários</h3>
+                    <p>Porsche Centre Luanda e Oficina Porsche Coqueiros, com morada, telefone, horários do showroom e do centro técnico, e botões "Como chegar" e "Compartilhar".</p>
+                </div>
+                <div class="func-card">
+                    <i class="bi bi-compass"></i>
+                    <h3>Navegação rápida</h3>
+                    <p>Barra de acesso rápido (Fale Connosco, Serviços, Club Porsche Angola, WhatsApp, Unidades) e menu lateral para o site todo.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="projeto-galeria reveal">
+            <div class="galeria-item estreito">
+                <img src="projeto7/img1.png" alt="Porsche Angola - Página inicial">
+                <p class="legenda">Página inicial — "O seu Porsche merece o cuidado que apenas a Porsche Angola pode oferecer", barra de acesso rápido, modelos e unidades</p>
+            </div>
+
+            <div class="galeria-item estreito">
+                <img src="projeto7/img2.png" alt="Porsche Angola - Serviços e Oficina Oficial">
+                <p class="legenda">Serviços & Oficina Oficial — "Assistência Especializada" com os seis serviços e botões de ação</p>
+            </div>
+
+            <div class="galeria-item estreito">
+                <img src="projeto7/img3.png" alt="Porsche Angola - Porsche Centre Luanda">
+                <p class="legenda">Porsche Centre Luanda — showroom, Porsche Exclusive Manufaktur e oficina técnica com profissionais certificados</p>
+            </div>
+
+            <div class="galeria-item estreito">
+                <img src="projeto7/img4.png" alt="Porsche Angola - Formulário de contacto">
+                <p class="legenda">Contacto — formulário de pedido com assunto, modelo, ano de fabrico e consentimento de dados</p>
+            </div>
+
+            <div class="galeria-item estreito">
+                <img src="projeto7/img5.png" alt="Porsche Angola - Menu lateral">
+                <p class="legenda">Menu lateral — acesso a serviços, unidades, contacto, modelos e área reservada</p>
+            </div>
+
+            <div class="projeto-nav">
+                <a href="index.html#projetos"><i class="bi bi-arrow-left"></i> Todos os projetos</a>
+                <a href="contacto.html">Falar sobre um projeto <i class="bi bi-arrow-right"></i></a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="interface">
+            <div class="line-footer">
+                <div class="flex">
+                    <div class="logo">
+                        <h2 style="color: #fff;"><a href="index.html">PEDRO<span>MIGUEL.</span></a></h2>
+                    </div>
+                    <div class="btn-social">
+                        <a href="https://youtube.com/@pedromiguellufuto?si=7yE64rBI-hNYIMLc" target="_blank" rel="canal youtube"><button><i class="bi bi-youtube"></i></button></a>
+                        <a href="https://www.instagram.com/pedromiguel9948?igsh=OHBoNWQ1d2V5d3V6" target="_blank" rel="instagram"><button><i class="bi bi-instagram"></i></button></a>
+                        <a href="https://www.linkedin.com/in/pedro-lufuto-2a4253391?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="linkedin"><button><i class="bi bi-linkedin"></i></button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="line-footer borda">
+                <p><i class="bi bi-envelope"></i> <a href="contacto.html">pedrolufuto944@gmail.com</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="scroll-top" id="scroll-top">
+        <i class="bi bi-arrow-up-short"></i>
+    </div>
+
+    <script src="menu.js"></script>
+</body>
+
+</html>
