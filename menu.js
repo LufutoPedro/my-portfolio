@@ -131,3 +131,8 @@ document.addEventListener('DOMContentLoaded', () => {
         resizeTimeout = setTimeout(montarCarrossel, 200);
     });
 });
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(montarCarrossel, 200);
+    });
+});
