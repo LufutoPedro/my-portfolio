@@ -91,25 +91,58 @@
         <section class="especialidade reveal" id="especialidades">
             <div class="interface">
                 <h2 class="titulo">MINHAS <span>ESPECIALIDADES.</span></h2>
-                <div class="flex">
-                    <div class="especialidades-box">
-                        <i class="bi bi-code-square" aria-hidden="true"></i>
-                        <h3>Website</h3>
-                        <p>Desenvolvimento de sites modernos, responsivos e otimizados.</p>
+
+                <div class="especialidades-carrossel">
+                    <button type="button" class="seta-esp seta-esp-esquerda" id="seta-esp-esquerda" aria-label="Especialidade anterior">
+                        <i class="bi bi-chevron-left"></i>
+                    </button>
+
+                    <div class="especialidades-viewport">
+                        <div class="especialidades-track" id="especialidades-track">
+
+                            <!-- Página 1 -->
+                            <div class="especialidades-pagina">
+                                <div class="especialidades-box">
+                                    <i class="bi bi-code-square" aria-hidden="true"></i>
+                                    <h3>Website</h3>
+                                    <p>Desenvolvimento de sites modernos, responsivos e otimizados para todos os dispositivos e motores de pesquisa.</p>
+                                </div>
+
+                                <div class="especialidades-box">
+                                    <i class="bi bi-wordpress" aria-hidden="true"></i>
+                                    <h3>Blog</h3>
+                                    <p>Configuração e personalização de blogs para partilha de conteúdo e construção de autoridade online.</p>
+                                </div>
+
+                                <div class="especialidades-box">
+                                    <i class="bi bi-person-badge" aria-hidden="true"></i>
+                                    <h3>Portfólio</h3>
+                                    <p>Criação de portfólios digitais profissionais, modernos e personalizados para destacar as competências, projetos e trajetória de cada cliente — pensados para causar a melhor primeira impressão.</p>
+                                </div>
+                            </div>
+
+                            <!-- Página 2 -->
+                            <!-- Para adicionar uma nova especialidade, copia um bloco .especialidades-box aqui dentro. Quando esta página tiver 3 caixas, cria uma nova Página 3 com o mesmo formato. -->
+                            <div class="especialidades-pagina">
+                                <div class="especialidades-box">
+                                    <i class="bi bi-whatsapp" aria-hidden="true"></i>
+                                    <h3>Chatbot</h3>
+                                    <p>Criação de chatbots inteligentes integrados com WhatsApp para automação do atendimento ao cliente.</p>
+                                </div>
+
+                                <div class="especialidades-box">
+                                    <i class="bi bi-layout-text-window-reverse" aria-hidden="true"></i>
+                                    <h3>Landing Page</h3>
+                                    <p>Criação de landing pages estratégicas de alta conversão, com design atrativo, carregamento rápido e foco em transformar visitantes em clientes.</p>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
 
-                    <div class="especialidades-box">
-                        <i class="bi bi-whatsapp" aria-hidden="true"></i>
-                        <h3>Chatbot</h3>
-                        <p>Criação de chatbots inteligentes integrados com WhatsApp para automação do atendimento ao
-                            cliente.</p>
-                    </div>
-
-                    <div class="especialidades-box">
-                        <i class="bi bi-wordpress" aria-hidden="true"></i>
-                        <h3>Blog</h3>
-                        <p>Configuração e personalização de blogs para partilha de conteúdo e construção de autoridade.</p>
-                    </div>
+                    <button type="button" class="seta-esp seta-esp-direita" id="seta-esp-direita" aria-label="Próxima especialidade">
+                        <i class="bi bi-chevron-right"></i>
+                    </button>
                 </div>
 
             </div>
@@ -141,7 +174,56 @@
                             <a href="https://youtube.com/@pedromiguellufuto" target="_blank" rel="noopener noreferrer" aria-label="Canal de YouTube"><button type="button" tabindex="-1"><i class="bi bi-youtube"></i></button></a>
                             <a href="https://www.instagram.com/pedromiguel9948" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><button type="button" tabindex="-1"><i class="bi bi-instagram"></i></button></a>
                             <a href="https://www.linkedin.com/in/pedro-lufuto-2a4253391" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><button type="button" tabindex="-1"><i class="bi bi-linkedin"></i></button></a>
+                            <a href="https://github.com/LufutoPedro" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><button type="button" tabindex="-1"><i class="bi bi-github"></i></button></a>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="stack reveal" id="stack">
+            <div class="interface">
+                <h2 class="titulo">A MINHA <span>STACK.</span></h2>
+
+                <div class="stack-grid">
+                    <div class="stack-card">
+                        <span class="stack-label"><span>01</span> LINGUAGENS</span>
+                        <p>JavaScript, PHP, HTML5, CSS3</p>
+                    </div>
+
+                    <div class="stack-card">
+                        <span class="stack-label"><span>02</span> FRONTEND</span>
+                        <p>React.js, Tailwind CSS, Design Responsivo, UI/UX</p>
+                    </div>
+
+                    <div class="stack-card">
+                        <span class="stack-label"><span>03</span> BACKEND &amp; AUTOMAÇÃO</span>
+                        <p>Node.js, PHP, APIs REST, Chatbots WhatsApp</p>
+                    </div>
+
+                    <div class="stack-card">
+                        <span class="stack-label"><span>04</span> BASE DE DADOS</span>
+                        <p>PostgreSQL, MySQL, Modelagem de Dados</p>
+                    </div>
+
+                    <div class="stack-card">
+                        <span class="stack-label"><span>05</span> CMS &amp; WEB</span>
+                        <p>WordPress, Portfólios Digitais, Landing Pages, SEO</p>
+                    </div>
+
+                    <div class="stack-card">
+                        <span class="stack-label"><span>06</span> FERRAMENTAS</span>
+                        <p>Git, GitHub, VS Code, npm, Pacote Office</p>
+                    </div>
+
+                    <div class="stack-card">
+                        <span class="stack-label"><span>07</span> INFRAESTRUTURA &amp; TI</span>
+                        <p>Sistemas Operativos, Suporte Técnico, Hardware, Biometria</p>
+                    </div>
+
+                    <div class="stack-card">
+                        <span class="stack-label"><span>08</span> IDIOMAS</span>
+                        <p>Português — Nativo</p>
                     </div>
                 </div>
             </div>
@@ -205,6 +287,7 @@
                         <a href="https://youtube.com/@pedromiguellufuto" target="_blank" rel="noopener noreferrer" aria-label="Canal de YouTube"><button type="button" tabindex="-1"><i class="bi bi-youtube"></i></button></a>
                         <a href="https://www.instagram.com/pedromiguel9948" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><button type="button" tabindex="-1"><i class="bi bi-instagram"></i></button></a>
                         <a href="https://www.linkedin.com/in/pedro-lufuto-2a4253391" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><button type="button" tabindex="-1"><i class="bi bi-linkedin"></i></button></a>
+                        <a href="https://github.com/LufutoPedro" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><button type="button" tabindex="-1"><i class="bi bi-github"></i></button></a>
                     </div>
                 </div>
             </div>
@@ -221,6 +304,7 @@
 
     <script src="menu.js"></script>
     <script src="portfolio-slider.js"></script>
+    <script src="especialidades-slider.js"></script>
 </body>
 
 </html>
