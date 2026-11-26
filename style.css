@@ -767,64 +767,6 @@ footer .line-footer p a:hover {
     transform: translateY(0);
 }
 
-/* ESPECIALIDADES CARROSSEL */
-.especialidades-carrossel {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    margin-top: 45px;
-}
-
-.especialidades-viewport {
-    overflow: hidden;
-    width: 100%;
-}
-
-.especialidades-track {
-    display: flex;
-    transition: transform .6s cubic-bezier(0.65, 0, 0.35, 1);
-}
-
-.especialidades-pagina {
-    display: flex;
-    justify-content: center;
-    gap: 60px;
-    flex: 0 0 100%;
-    width: 100%;
-}
-
-.especialidades-pagina .especialidades-box {
-    flex: 1;
-    max-width: 380px;
-}
-
-.seta-esp {
-    flex-shrink: 0;
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
-    border: none;
-    background-color: #0066CC;
-    color: #fff;
-    font-size: 24px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: .3s;
-}
-
-.seta-esp:hover {
-    background-color: #1690e1;
-    transform: scale(1.1);
-}
-
-.seta-esp.desativado {
-    opacity: .3;
-    pointer-events: none;
-    cursor: default;
-}
-
 /* RESPONSIVIDADE */
 @media screen and (max-width: 1020px) {
 
@@ -864,13 +806,29 @@ footer .line-footer p a:hover {
 
     .topo-do-site .img-topo-site img {
         width: 100%;
-        max-width: 280px;
+        max-width: 420px;
     }
 
     /* ESPECIALIDADES */
     .especialidades-pagina {
         flex-direction: column;
+        align-items: center;
         gap: 20px;
+    }
+
+    .especialidades-pagina .especialidades-box {
+        width: 100%;
+        max-width: 520px;
+        margin-top: 0;
+        padding: 30px 24px;
+    }
+
+    .especialidade .especialidades-box i {
+        font-size: 52px;
+    }
+
+    .especialidade .especialidades-box h3 {
+        font-size: 24px;
     }
 
     .seta-esp {
@@ -893,8 +851,14 @@ footer .line-footer p a:hover {
     }
 
     /* STACK */
+    section.stack {
+        padding: 60px 4%;
+    }
+
     .stack-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        margin-top: 36px;
     }
 
     /* PORTFOLIO */
@@ -921,8 +885,63 @@ footer .line-footer p a:hover {
 }
 
 @media screen and (max-width: 700px) {
+    .topo-do-site .img-topo-site img {
+        max-width: 360px;
+    }
+
+    /* ESPECIALIDADES */
+    .especialidades-carrossel {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+        margin-top: 30px;
+    }
+
+    .especialidades-viewport {
+        order: -1;
+        flex: 0 0 100%;
+    }
+
+    .especialidades-pagina {
+        gap: 16px;
+    }
+
+    .especialidades-pagina .especialidades-box {
+        max-width: 100%;
+        padding: 24px 20px;
+    }
+
+    .especialidade .especialidades-box i {
+        font-size: 44px;
+    }
+
+    .especialidade .especialidades-box h3 {
+        font-size: 21px;
+        margin: 12px 0;
+    }
+
+    .especialidade .especialidades-box p {
+        font-size: 14px;
+    }
+
+    /* STACK */
+    section.stack {
+        padding: 50px 4%;
+    }
+
     .stack-grid {
         grid-template-columns: 1fr;
+        gap: 14px;
+        margin-top: 28px;
+    }
+
+    .stack-card {
+        padding: 20px 18px;
+        gap: 10px;
+    }
+
+    .stack-card p {
+        font-size: 14px;
     }
 
     .img-port {
